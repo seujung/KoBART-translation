@@ -37,10 +37,10 @@ class KoBARTSummaryDataset(Dataset):
     
     def __getitem__(self, idx):
         instance = self.docs.iloc[idx]
-        input_ids = self.tok.encode(instance['news'])
+        input_ids = self.tok.encode(instance['kr'])
         input_ids = self.add_padding_data(input_ids)
 
-        label_ids = self.tok.encode(instance['summary'])
+        label_ids = self.tok.encode(instance['en'])
         label_ids.append(self.tok.eos_token_id)
         dec_input_ids = [self.pad_index]
         dec_input_ids += label_ids[:-1]
