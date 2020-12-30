@@ -12,7 +12,7 @@ from transformers import BartForConditionalGeneration, PreTrainedTokenizerFast
 from transformers.optimization import AdamW, get_cosine_schedule_with_warmup
 from kobart import get_pytorch_kobart_model, get_kobart_tokenizer
 
-parser = argparse.ArgumentParser(description='KoBART Summarization')
+parser = argparse.ArgumentParser(description='KoBART translation')
 
 parser.add_argument('--checkpoint_path',
                     type=str,
