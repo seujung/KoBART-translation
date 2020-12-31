@@ -67,7 +67,7 @@ python train.py  --gradient_clip_val 1.0 --max_epochs 50 --default_root_dir logs
 | ||Text|
 |-------|:--------|:--------|
 |1|Label|I'd better ask more specifically about the topic when I meet with my friends today.|
-|2|Google Translation|I am very worried about the impact of the US economy, which has risen, will affect our economy as it has already raised its third benchmark interest rate this year.|
+|2|Google Translation|I need to meet my friends today and learn more about the topic!|
 |2|koBART|We should meet our friends today to find out about the topic in detail!|
 
 ## Model Performance
