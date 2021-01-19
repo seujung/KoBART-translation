@@ -2,10 +2,7 @@
 
 ## Install KoBART
 ```
-git submodule update --init --recursive
-cd KoBART
-pip install -r requirements.txt
-pip install .
+pip install git+https://github.com/SKT-AI/KoBART#egg=kobart
 ```
 
 ## Requirements
@@ -85,7 +82,7 @@ python train.py  --gradient_clip_val 1.0 --max_epochs 50 --default_root_dir logs
    - 변환 코드를 실행하면 <b>./translation_binary</b> 에 model binary 가 추출 됨
   
 ```
- python get_model_binary.py --hparams hparam_path -- model_binary model_binary_path
+ python get_model_binary.py --hparams hparam_path --model_binary model_binary_path
 ```
 
 - streamlit을 활용하여 Demo 실행
