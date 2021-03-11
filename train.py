@@ -39,8 +39,9 @@ class ArgsBase():
 
         parser.add_argument('--batch_size',
                             type=int,
-                            default=14,
+                            default=28,
                             help='')
+
         parser.add_argument('--max_len',
                             type=int,
                             default=512,
@@ -175,7 +176,6 @@ class KoBARTConditionalGeneration(Base):
         self.tokenizer = get_kobart_tokenizer()
 
     def forward(self, inputs):
-
         attention_mask = inputs['input_ids'].ne(self.pad_token_id).float()
         decoder_attention_mask = inputs['decoder_input_ids'].ne(self.pad_token_id).float()
         
@@ -217,6 +217,7 @@ if __name__ == '__main__':
                         args.test_file,
                         None,
                         max_len=args.max_len,
+                        batch_size=args.batch_size,
                         num_workers=args.num_workers)
     
     checkpoint_callback = pl.callbacks.ModelCheckpoint(monitor='val_loss',
